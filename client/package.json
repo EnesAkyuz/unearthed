@@ -1,19 +1,16 @@
 {
-  "name": "client",
-  "private": true,
-  "version": "0.0.0",
+  "name": "unearthed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "nodemon server.js"
   },
-  "devDependencies": {
-    "vite": "^5.4.1"
-  },
-  "main": "main.js",
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
 }
