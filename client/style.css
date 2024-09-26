@@ -1,54 +1,155 @@
-/* Resets some default padding/margin */
-body, h1, nav, ul, li {
-  margin: 0;
-  padding: 0;
+/* Root Styles CSS */
+:root {
+  background-color: white;
+  font-family: Avenir, Helvetica, sans-serif;
+  color: black;
 }
 
-body {
-  font-family: Arial, sans-serif; /* Ensures consistent font across devices */
-}
-
+/* Header CSS */
 .header-container {
-  display: flex;
-  justify-content:stretch;
-  align-items: center;
+  overflow: hidden;
+  padding: 20px 10px;
+  padding-bottom: 60px;
 }
 
 .header-left {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  text-align: center;
-  margin: 15px; /* Centers the logo and heading */
+  float: left;
+  height: 100px;
+  width: 310px;
 }
 
-img {
-  max-width: 100%; /* Ensures the image is responsive */
-  height: auto;
-  width: 120px; /* Adjust the logo size as needed */
+.header-left img {
+  padding-top: 8px;
+  height: 80px;
 }
 
-h1 {
-  color: #333; /* Dark grey color for the text */
-  font-size: 5vh; /* Larger font size for the heading */
-}
-
-.header-right {
-  flex-grow: 1; /* Same as header-left for balance */
-  text-align: right;
-  align-items: end; /* Centers the home button */
-  margin: 15px;
-  margin-right: 4vw;
+.header-left h1 {
+  float: right;
+  font-size: 45px;
   
 }
 
-.home {
+.header-right {
+  float: right;
+  padding-top:30px;
+  padding-right:10px;
+}
+
+.header-right button {
+background-color: white;
+border: solid;
+border-width: 3px;
+border-color: rgb(3, 7, 89);
+border-radius: 0.1rem;
+border-radius: 16px;
+box-sizing: border-box;
+color:  rgb(3, 7, 89);
+cursor: pointer;
+padding: 15px 16px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+width: 80px;
+}
+
+/* Home page CSS */
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background: transparent;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(3, 7, 89);
+  border-radius: 0.3rem;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.057);
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+
+.card img {
+  height: 100%;
+}
+
+.top-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+}
+
+.bottom-container {
+  margin-top:30px;
+  margin-left: 10px;
+}
+
+.bottom-container h3 {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.bottom-container p {
+  margin: 2px;
+}
+
+.bottom-container a {
+  color: rgb(228, 16, 133);
+  text-decoration: none;
+}
+
+/* 404 Page CSS */
+
+.fof-container{
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: black;
+}
+
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  color:rgb(26, 25, 25);
+  font-size: 50px;
   display: inline-block;
-  color: #002d5d;
-  padding: 10px 20px; /* Padding inside the button */
-  text-decoration: none; /* Removes underline from links */
-  border: 3px solid #002d5d;
-  border-radius: 5px; /* Rounded corners for the button */
-  font-size: 3vh; /* Adjust font size for the button */
-  cursor: pointer; /* Changes cursor to pointer when hovering over the button */
+  padding-right: 12px;
+  animation: type .6s alternate infinite;
+}
+
+@keyframes type {
+  from {box-shadow: inset -3px 0px 0px #888;}
+  to {box-shadow: inset -3px 0px 0px transparent;}
+}
+
+/* Detail Page CSS*/
+
+.gift-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.image-container {
+  padding-left: 100px;
+  width: 40vw;
+}
+
+.image-container img {
+  width: 80%;
+}
+
+.gift-details {
+  width: 45vw;
 }
